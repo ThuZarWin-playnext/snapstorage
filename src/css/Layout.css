@@ -1,0 +1,247 @@
+.layout-container {
+  height: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ヘッダー配置 */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 1rem;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #0173b1;
+  font-weight: bold;
+}
+
+/* アカウントエリア（右上） */
+.account-area {
+  position: relative;
+}
+
+.account-name {
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+/* .account-name:hover {
+  background: #eef3ff;
+} */
+
+/* ドロップダウンメニュー */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+/* .header-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f7faff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.header-buttons button:hover {
+  background: #e0e9f9;
+} */
+
+.main-menu {
+  display: flex;
+  background: #f1f5f9;
+  margin: 0rem 1rem;
+  border-radius: 5px;
+}
+
+.main-menu button {
+  font-size: large;
+  width: 120px;
+  margin-left: 15px;
+  /* flex: 1; */
+  padding: 0.7rem 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #d6e3ec;
+  color: #005d8f;
+  transition: background 0.3s ease;
+}
+
+.main-menu button.active,
+.main-menu button:hover {
+  color: #000;
+  background: #fff;
+  border-left: 1px solid #e7e3e3;
+  border-right: 1px solid #e7e3e3;
+}
+
+.content-wrapper {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.sidebar {
+  flex: 0 0 200px;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  background: #d6e3ec;
+  border: none;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  text-align: left;
+  color: #005d8f;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.sidebar button.active,
+.sidebar button:hover {
+  background: #005d8f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.main-content {
+  flex: 1;
+  background: #fff;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+.fax-service h2 {
+  color: #2f558e;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.fax-service-box {
+  background: #f0f7ff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fax-service-box p {
+  margin: 0.5rem 0;
+}
+
+.fax-service ul {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.fax-service ul li {
+  margin-bottom: 0.5rem;
+}
+
+.fax-service button {
+  margin-top: 1rem;
+  background: #d5e1f6;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #2f558e;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fax-service button:hover {
+  background: #2f558e;
+  color: #fff;
+}
+
+/* 既存のスタイルはそのまま */
+
+@media (max-width: 600px) {
+  .content-wrapper {
+    flex-direction: column;
+    height: auto; /* 高さ制限解除 */
+  }
+
+  .main-menu {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .main-menu button {
+    flex: none;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    width: 80px;
+    margin-left: 10px;
+  }
+
+  .sidebar {
+    flex: none;
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    border-left: none;
+  }
+
+  .sidebar button {
+    flex: none;
+    white-space: nowrap; /* 文字折り返し防止 */
+  }
+
+  .main-content {
+    padding: 0rem 1rem;
+  }
+}
+
