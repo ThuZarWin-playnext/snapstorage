@@ -8,7 +8,7 @@ const Layout = ({ children, onLogout }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleAccountClick = (e) => {
-        e.stopPropagation(); // 親へのクリックイベント伝播を防止
+e.stopPropagation(); // 親へのクリックイベント伝播を防止
         setIsOpen((prev) => !prev);
     };
 
